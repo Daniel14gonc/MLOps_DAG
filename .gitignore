@@ -1,0 +1,63 @@
+# Python files
+*.pyc
+*.pyo
+__pycache__/
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Environment variable files
+.env
+.env.*
+
+# Airflow-specific files
+airflow.db
+airflow.cfg
+logs/
+dags/__pycache__/
+plugins/__pycache__/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore compiled SQL files
+*.sql~
+
+# Ignore pytest cache
+.pytest_cache/
+
+# Ignore temporary files
+*.swp
+*.swo
+*.bak
+
+# VS Code files
+.vscode/
+
+# macOS files
+.DS_Store
+
+# IntelliJ IDEA files
+.idea/
+
+# Docker files
+.dockerignore
+docker-compose.override.yml
+
+# Airflow specific storage
+tmp/
+.git/
+airflow_workspace/
+scheduler.lock
+
+# NodeJS if UI dependencies are present
+node_modules/
+
+logs
+
+*__pycache__
+
+scheduler
