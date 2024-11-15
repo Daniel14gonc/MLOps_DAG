@@ -19,7 +19,7 @@ with DAG(
     def extract_data_callable():
         # Print message, return a response
         print("Extracting data from workout API")
-        url = 'http://django-backend:8000/api/workouts/weekly/'
+        url = 'http://143.198.146.147:8000/api/workouts/weekly/'
         response = requests.get(url)
         if response.status_code == 200:
             return response.json()
@@ -67,7 +67,7 @@ with DAG(
     def predict(data):
         print(data)
         try:
-            response = requests.post('http://fastapi-backend:8001/predict/marathon_time_bulk', json=data)
+            response = requests.post('http://143.198.146.147:8001/predict/marathon_time_bulk', json=data)
             response.raise_for_status()
             return response.json().get('predictions')
         except requests.RequestException as e:
@@ -106,7 +106,7 @@ with DAG(
 
     def bulk_update(data):
         try:
-            response = requests.put('http://django-backend:8000/api/users/bulk-update-marathon-time/', json=data)
+            response = requests.put('http://143.198.146.147:8000/api/users/bulk-update-marathon-time/', json=data)
             response.raise_for_status()
         except requests.RequestException as e:
             raise ValueError(f"Error al llamar a la API: {e}")
